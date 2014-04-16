@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html ng-app="groupPageApp" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="Content/groupPageStyles.css">
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <title>Group page Demo</title>
+</head>
+<body>
+
+    <div id="dvGroupBanner" class="topBanner">
+        <table style="width:100%;padding-left:150px">
+            <tr>
+                <td class="pageHeader">
+                    Rope Walk
+                    <br />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="dvGroupContent" ng-controller="videoDivController" class="pure-menu pure-menu-open pure-menu-horizontal" style="background-color:#e6e5dc;width:100%;height:100%">
+        <div id="dvShowVideo" class="overlay" style="display:none;padding-bottom:100px;">
+            <table align="center" style="padding:50px;">
+                <tr>
+                    <td>
+                        <div id="divTest" style="background-color:black;">
+                            <table>
+                                <tr>
+                                    <td align="right">
+                                        <a ng-click="closeVideo()">
+                                            <img style="width:30px;height:30px" src="Images/application-exit.jpg" />
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <iframe width="700" id="iframeYouTubeVid" height="500" src="" allowfullscreen></iframe>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <table style="width: 100%; border-spacing:0;padding-left: 70px; padding-bottom:100px;padding-top: 100px" ng-controller="userProfileController">
+            <tr ng-repeat="userProfile1 in UserPofiles" ng-if="$index%3 ==0">
+                <td width="30%" ng-repeat="userProfile in UserPofiles" ng-if="($parent.$index)<=($index)&&($index<($parent.$index+3))">
+                    <div style="top:30px;padding-top:30px;width:350px">
+                        <a style="position:relative" ng-click='expandYouTube(userProfile.path)'>
+                            <img class="thumbnail" ng-src="http://img.youtube.com/vi/{{userProfile.path}}/0.jpg" />
+                            <img src="Images/play.jpg" class="playSign" />
+                        </a>
+
+                    </div>
+                    <table id="tblUserProfile" style="width:350px;background-color: white; border-spacing: 0px">
+                        <tr id="trUserInfo">
+                            <td>
+                                <table style="width: 100%;  border-bottom: solid; border-bottom-color: #efe1e1;">
+                                    <tr style="margin-left:10px;line-height:14px">
+                                        <td style="margin-left:5px">
+                                            <img style="margin-right:0px;width: 50px; height:50px;" src="Images/smiley.jpg" />
+                                        </td>
+                                        <td style="border-bottom-color: #efe1e1;">
+                                            <table style="border-spacing:0;width:100%;padding-bottom:15px">
+                                                <tr style="line-height:28px">
+                                                    <td style="padding-top:5px;font-weight:bold; ">
+                                                        {{userProfile.name}}
+                                                    </td>
+                                                    <td style="padding-top:5px;font-size:15px;color:gray;">
+                                                        \ TODO
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" style="color:blue;font-size:20px;">
+                                                        {{userProfile.description}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr style="line-height:35px">
+                            <td class="commentRow">
+                                Comment 1
+                            </td>
+                        </tr>
+                        <tr style="line-height:35px">
+                            <td class="commentRow">
+                                Comment 2
+                            </td>
+                        </tr>
+                        <tr style="line-height:35px">
+                            <td class="commentRow">
+                                Comment 3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #1ebdd0; line-height:25px;">
+                                <table style="width:100%;font-size:15px;font-weight:bold;color:white;text-align:right">
+                                    <tr>
+                                        <td>View all</td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+</body>
+</html>
