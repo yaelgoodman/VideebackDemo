@@ -1,5 +1,4 @@
 
-<p>Worth mentioning Files:</p> 
 
 <p>GroupPageDemo.html - The demo page.  </p> 
 <p>Migrations\Configuration.cs - contains the Seed function that creates/updates the database. </p> 
