@@ -1,0 +1,63 @@
+﻿.topBanner {
+    width: 100%;
+    height: 250px;
+    background-image: url('../Images/ropeWalkBanner.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.pageHeader {
+    font: 900;
+    color: white;
+    font-size: 250%;
+    padding-top:160px
+}
+
+.hideDiv {
+    visibility: hidden;
+}
+
+.showDiv {
+    visibility: visible;
+}
+
+.contentDisplay {
+    list-style-type: none;
+    display: inline;
+}
+
+#navlist li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.80);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.commentRow {
+    padding-top: 5px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.playSign {
+    cursor: pointer;
+    bottom: 90px;
+    left: 130px;
+    position: absolute;
+    width: 80px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    width: 350px;
+    height: 250px;
+}
