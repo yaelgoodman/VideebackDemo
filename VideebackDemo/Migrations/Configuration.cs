@@ -32,9 +32,13 @@ namespace VideebackDemo.Migrations
                                                 ,"B8Ui8IAEap4"
                                                 ,"Ka2vnJWQxyo"
                                                 ,"xTLlOwdawoo"
-                                                ,"9SaShn8OkJI"};
+                                                ,"9SaShn8OkJI"
+                                                ,"NrmknXUiAWo"
+                                                ,"B8Ui8IAEap4"
+                                                ,"Ka2vnJWQxyo"
+                                                ,"xTLlOwdawoo"};
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 11; i++)
             {
                 VideebackDemo.Models.UserProfile profile = new VideebackDemo.Models.UserProfile();
                 profile.id = i + 1;
@@ -43,7 +47,7 @@ namespace VideebackDemo.Migrations
                 profile.path = videoIds[i];
                 profile.description = "Description for user num" + i;
                 profile.name = "User #" + i;
-                profile.dateCreated = DateTime.Today;
+                profile.dateCreated = DateTime.Now;
                 profile.views = i;
                 context.UserProfiles.AddOrUpdate(profile);
             }
